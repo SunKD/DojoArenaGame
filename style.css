@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper{
+    width: 970px;
+    height: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid grey;
+    background-color: black;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.menu{
+    width: 300px;
+    height: 160px;
+    background-color: rgba(193, 193, 193, 0.8);
+    margin-left: auto;
+    margin-right: auto; 
+    margin-top: 250px;
+    border-radius: 10px;
+    border: 4px solid rgb(90, 88, 88);
+}
+
+h1{
+    color: rgba(236, 162, 0, 1);
+    text-shadow: 2px 2px 2px white;
+    padding: 20px;
+}
+
+h5{
+    display: inline-block;
+    vertical-align: top;
+    width: 80px;
+    height: 30px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 3px;
+    line-height: 30px;
+}
+
+.beachback{
+    background-image: url("img/beach.jpg");
+    background-size: 970px 800px;
+}
+
+.planetback{
+    background-image: url("img/planet.jpg");
+    background-size: 970px 800px;
+}
+
+.dojoback{
+    background-image: url("img/dojo.jpg");
+    background-size: 970px 800px;
+}
+
+.forestback{
+    background-image: url("img/forest.jpg");
+    background-size: 970px 800px;
+}
+
+.matrixback{
+    background-image: url("img/matrix.jpg");
+    background-size: 970px 800px;
+}
+
+.snowback{
+    background-image: url("img/snow.jpg");
+    background-size: 970px 800px;
+}
+
+
+.players{
+    width: 100%;
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+img{
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.char1{
+    width: 40%;
+    display: inline-block;
+    margin: 0 0 100px 0;
+}
+
+.char1 img, .char2 img{
+    height: 300px;
+    width: 200px;
+}
+
+
+.char2{
+    width: 40%;
+    display: inline-block;
+    margin-left: 100px;
+}

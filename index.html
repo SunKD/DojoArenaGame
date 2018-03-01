@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Document</title>
+    <script>
+        $(document).ready(function () {
+            $("#select_player").hide();
+            $("#beach").hover(function () {
+                $("#wrapper").addClass("beachback")
+            }, function () {
+                $("#wrapper").removeClass("beachback")
+            })
+
+            $("#planet").hover(function () {
+                $("#wrapper").addClass("planetback")
+            }, function () {
+                $("#wrapper").removeClass("planetback")
+            })
+
+            $("#dojo").hover(function () {
+                $("#wrapper").addClass("dojoback")
+            }, function () {
+                $("#wrapper").removeClass("dojoback")
+            })
+
+            $("#forest").hover(function () {
+                $("#wrapper").addClass("forestback")
+            }, function () {
+                $("#wrapper").removeClass("forestback")
+            })
+
+            $("#matrix").hover(function () {
+                $("#wrapper").addClass("matrixback")
+            }, function () {
+                $("#wrapper").removeClass("matrixback")
+            })
+
+            $("#snow").hover(function () {
+                $("#wrapper").addClass("snowback")
+            }, function () {
+                $("#wrapper").removeClass("snowback")
+            })
+
+            $("h5").click(function () {
+                $("#wrapper").css({ "background-image": $(this).attr("data-alt-src"), "background-size": "970px 800px" });
+                $("#select").hide();
+                $("#select_player").show();
+            })
+
+            $("#player1").on('change', function () {
+                var charset = $("option:selected",this).attr('data-alt-src');
+                $(".char1").html("<img src='"+charset+"'alt='selectedChar'>");
+            })
+
+            $("#player2").on('change', function () {
+                var charset = $("option:selected",this).attr('data-alt-src');
+                $(".char2").html("<img src='"+charset+"'alt='selectedChar'>");
+            })
+
+        });
+    </script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="select" class="menu">
+            <h1>Select Arena</h1>
+            <h5 id="beach" data-alt-src="url(img/beach.jpg)">beach</h5>
+            <h5 id="planet" data-alt-src="url(img/planet.jpg" )>planet</h5>
+            <h5 id="dojo" data-alt-src="url(img/dojo.jpg)">dojo</h5>
+            <h5 id="forest" data-alt-src="url(img/forest.jpg)">forest</h5>
+            <h5 id="matrix" data-alt-src="url(img/matrix.jpg)">matrix</h5>
+            <h5 id="snow" data-alt-src="url(img/snow.jpg)">snow</h5>
+        </div>
+        <div id="select_player" class="menu">
+            <h1>Select Player</h1>
+            <select id="player1">
+                <option>Select Ninja</option>
+                <option value="leo" data-alt-src="img/leo.png">Leo</option>
+                <option value="mikey" data-alt-src="img/mikey.png">Mikey</option>
+                <option value="raphael" data-alt-src="img/raphael.png">Raphael</option>
+                <option value="donny" data-alt-src="img/donny.png">Donny</option>
+            </select>
+            <select id="player2">
+                <option>Select Ninja</option>
+                <option value="leo" data-alt-src="img/leo.png">Leo</option>
+                <option value="mikey" data-alt-src="img/mikey.png">Mikey</option>
+                <option value="raphael" data-alt-src="img/raphael.png">Raphael</option>
+                <option value="donny" data-alt-src="img/donny.png">Donny</option>
+            </select>
+        </div>
+        <div id="players">
+            <div class="char1"></div>
+            <div class="char2"></div>
+        </div>
+    </div>
+</body>
+</html>
